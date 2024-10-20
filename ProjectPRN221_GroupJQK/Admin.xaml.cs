@@ -38,5 +38,11 @@ namespace ProjectPRN221_GroupJQK
         {
             MainContent.Navigate(new ManageAuthor());
         }
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }

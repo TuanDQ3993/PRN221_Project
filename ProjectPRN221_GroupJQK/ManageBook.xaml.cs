@@ -26,9 +26,14 @@ namespace ProjectPRN221_GroupJQK
             InitializeComponent();
         }
 
+        string[] elements = { "Title", "Author", "Publisher", "Year" };
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             load();
+            loadCategory();
+            cbSearchBy.ItemsSource = elements;
+            cbSearchBy.SelectedIndex = 0;
         }
         private void load()
         {
@@ -36,6 +41,60 @@ namespace ProjectPRN221_GroupJQK
             dgvBook.ItemsSource = books;
         }
 
-        
+        private void loadCategory()
+        {
+            var cate = PRN221_LibContext.Ins.Categories.Select(x => x.CategoryName).ToList();
+            cbCategory.ItemsSource = cate;
+            cate.Insert(0, "All");
+            cbCategory.SelectedIndex = 0;
+
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string keyword = txtSearch.Text; 
+            string searchBy = cbSearchBy.SelectedItem.ToString(); 
+
+            var query = PRN221_LibContext.Ins.Books.AsQueryable(); 
+            if (searchBy == "Title")
+            {
+                query = query.Where(book => book.Title.Contains(keyword));
+            }
+            else if (searchBy == "Author")
+            {
+                query = query.Where(book => book.Author.AuthorName.Contains(keyword));
+            }
+            else if (searchBy == "Publisher")
+            {
+                query = query.Where(book => book.Publisher.PublisherName.Contains(keyword));
+            }
+            else if (searchBy == "Year")
+            {
+                if (int.TryParse(keyword, out int year))
+                {
+                    query = query.Where(book => book.YearPublished == year);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid year", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+
+            // Hiển thị kết quả tìm kiếm
+            dgvBook.ItemsSource = query.ToList();
+        }
+
+        private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedCategory = cbCategory.SelectedItem.ToString(); 
+            var query = PRN221_LibContext.Ins.Books.AsQueryable();
+
+            if (selectedCategory != "All")
+            {
+                query = query.Where(book => book.Category.CategoryName == selectedCategory); 
+            }
+            dgvBook.ItemsSource = query.ToList();
+        }
     }
 }
