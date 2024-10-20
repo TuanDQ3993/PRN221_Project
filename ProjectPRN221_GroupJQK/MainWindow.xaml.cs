@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using ProjectPRN221_GroupJQK.Models;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,41 @@ namespace ProjectPRN221_GroupJQK
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string email = txtEmail.Text;
+            string password = txtPassword.Password;
+
+            var user = PRN221_LibContext.Ins.Users
+                       .SingleOrDefault(u => u.Email == email && u.Password == password);
+
+            if (user != null)
+            {
+                if (user.Role != null)
+                {
+                    if (user.Role == 1)
+                    {
+                        Admin admin=new Admin();
+                        admin.Show();
+                        this.Hide();
+
+
+                    }
+                    else
+                    {
+                        
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
+
         }
 
     }

@@ -23,10 +23,11 @@
         <Grid Grid.Row="1" Margin="0,0,0,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -39,26 +40,30 @@
                       Grid.Column="1" 
                       Margin="0,0,20,0">
             </ComboBox>
+            <TextBox x:Name="txtSearch" 
+                     Grid.Column="2" 
+                     Margin="0,0,20,0">
+            </TextBox>
+            <Button x:Name="btnSearch" 
+                    Content="Search" 
+                    Grid.Column="2"
+                    Width="80 " 
+                    Background="#FF5722"
+                    Foreground="White" Grid.ColumnSpan="2" Height="22" Margin="200,0,0,0" VerticalAlignment="Top" Click="btnSearch_Click"/>
 
             <TextBlock Text="Category:" 
                      VerticalAlignment="Center" 
-                     Grid.Column="2" 
-                     Margin="0,0,10,0"/>
+                     Grid.Column="4" 
+                     Margin="40,0,10,0"/>
 
             <ComboBox x:Name="cbCategory" 
-                      Grid.Column="3" 
-                      Margin="0,0,20,0"/>
-
-            <Button x:Name="btnSearch" 
-                    Content="Search" 
-                    Grid.Column="4"
-                    Width="80" 
-                    Background="#FF5722"
-                    Foreground="White"/>
+                      Grid.Column="5" 
+                      Margin="0,0,20,0"
+                      SelectionChanged="cbCategory_SelectionChanged"/>
 
             <Button x:Name="btnAddNewBook" 
                     Content="Add New Book" 
-                    Grid.Column="5"
+                    Grid.Column="6"
                     Width="120" 
                     HorizontalAlignment="Right"
                     Background="#4CAF50"
