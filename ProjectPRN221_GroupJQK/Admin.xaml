@@ -50,14 +50,14 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnUsers">
+                <Button x:Name="btnUsers" Click="btnUsers_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="👥" Margin="0,0,10,0"/>
                         <TextBlock Text="Users Management"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnAuthors">
+                <Button x:Name="btnAuthors" Click="btnAuthors_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="✍️" Margin="0,0,10,0"/>
                         <TextBlock Text="Authors Management"/>

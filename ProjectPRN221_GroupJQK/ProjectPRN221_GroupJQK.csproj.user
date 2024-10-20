@@ -10,7 +10,13 @@
     <Compile Update="Admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ManageAuthor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ManageBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManageUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,7 +27,13 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ManageAuthor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ManageBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManageUser.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

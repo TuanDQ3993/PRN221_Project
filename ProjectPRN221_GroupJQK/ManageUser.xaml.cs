@@ -10,33 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjectPRN221_GroupJQK
 {
     /// <summary>
-    /// Interaction logic for Admin.xaml
+    /// Interaction logic for ManageUser.xaml
     /// </summary>
-    public partial class Admin : Window
+    public partial class ManageUser : Page
     {
-        public Admin()
+        public ManageUser()
         {
             InitializeComponent();
         }
 
-        private void btnBooks_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            MainContent.Navigate(new ManageBook());
-        }
 
-        private void btnUsers_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Navigate(new ManageUser());
-        }
-
-        private void btnAuthors_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Navigate(new ManageAuthor());
         }
     }
 }

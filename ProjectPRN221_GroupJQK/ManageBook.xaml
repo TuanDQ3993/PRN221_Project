@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectPRN221_GroupJQK"
         mc:Ignorable="d"
-        Title="ManageBook" Height="850" Width="1200" Loaded="Page_Loaded">
+        d:DesignHeight="850" d:DesignWidth="1200"
+        Title="ManageBook" Loaded="Page_Loaded">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,46 +24,50 @@
         <Grid Grid.Row="1" Margin="0,0,0,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Search by:" 
-                     VerticalAlignment="Center" 
-                     Grid.Column="0" 
-                     Margin="0,0,10,0"/>
+             VerticalAlignment="Center" 
+             Grid.Column="0" 
+             Margin="0,0,10,0"/>
 
             <ComboBox x:Name="cbSearchBy" 
-                      Grid.Column="1" 
-                      Margin="0,0,20,0">
+              Grid.Column="1" 
+              Margin="0,0,20,0">
             </ComboBox>
+            <TextBox x:Name="txtSearch" 
+             Grid.Column="2" 
+             Margin="0,0,20,0">
+            </TextBox>
+            <Button x:Name="btnSearch" 
+            Content="Search" 
+            Grid.Column="3"
+            Width="80 " 
+            Background="#FF5722"
+            Foreground="White"/>
 
             <TextBlock Text="Category:" 
-                     VerticalAlignment="Center" 
-                     Grid.Column="2" 
-                     Margin="0,0,10,0"/>
+             VerticalAlignment="Center" 
+             Grid.Column="4" 
+             Margin="40,0,10,0"/>
 
             <ComboBox x:Name="cbCategory" 
-                      Grid.Column="3" 
-                      Margin="0,0,20,0"/>
-
-            <Button x:Name="btnSearch" 
-                    Content="Search" 
-                    Grid.Column="4"
-                    Width="80" 
-                    Background="#FF5722"
-                    Foreground="White"/>
+              Grid.Column="5" 
+              Margin="0,0,20,0"/>
 
             <Button x:Name="btnAddNewBook" 
-                    Content="Add New Book" 
-                    Grid.Column="5"
-                    Width="120" 
-                    HorizontalAlignment="Right"
-                    Background="#4CAF50"
-                    Foreground="White"/>
+            Content="Add New Book" 
+            Grid.Column="6"
+            Width="120" 
+            HorizontalAlignment="Right"
+            Background="#4CAF50"
+            Foreground="White"/>
         </Grid>
 
         <!-- Books DataGrid -->
@@ -74,7 +79,7 @@
                   SelectionMode="Single"
                   GridLinesVisibility="None">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Book ID" Width="50" IsReadOnly="True" Binding="{Binding BookId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Book ID" Width="70" IsReadOnly="True" Binding="{Binding BookId}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Title" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Author" Width="150" Binding="{Binding Author.AuthorName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Category" Width="100" Binding="{Binding Category.CategoryName}"></DataGridTextColumn>
