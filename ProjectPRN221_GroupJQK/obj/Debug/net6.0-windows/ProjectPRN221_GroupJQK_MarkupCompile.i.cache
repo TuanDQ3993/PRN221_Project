@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\App.xaml
-2-1525160217
+3-379046175
 
-16-398134804
+17-44591243
 2201158561610
-MainWindow.xaml;ManageBook.xaml;
+Admin.xaml;MainWindow.xaml;ManageBook.xaml;
 
-True
+False
 

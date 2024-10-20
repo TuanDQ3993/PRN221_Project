@@ -60,6 +60,13 @@ D:\workspace\ki 7\PRN221\Project\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug
 D:\workspace\ki 7\PRN221\Project\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK.pdb
 D:\workspace\ki 7\PRN221\Project\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK.genruntimeconfig.cache
 D:\workspace\ki 7\PRN221\Project\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ref\ProjectPRN221_GroupJQK.dll
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK.csproj.AssemblyReference.cache
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\Admin.g.cs
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ManageBook.g.cs
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\App.g.cs
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK_MarkupCompile.cache
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK_MarkupCompile.lref
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\ProjectPRN221_GroupJQK.exe
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\appsettings.json
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\ProjectPRN221_GroupJQK.deps.json
@@ -104,12 +111,7 @@ D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-wind
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK.csproj.AssemblyReference.cache
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ManageBook.g.cs
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\App.g.cs
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK_MarkupCompile.cache
-D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK_MarkupCompile.lref
+D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\Admin.baml
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\MainWindow.baml
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ManageBook.baml
 D:\FPT - Ki 7\PRN221\PRN221_Project\ProjectPRN221_GroupJQK\obj\Debug\net6.0-windows\ProjectPRN221_GroupJQK.g.resources

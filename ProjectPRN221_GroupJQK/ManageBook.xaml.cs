@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjectPRN221_GroupJQK.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,21 +19,23 @@ namespace ProjectPRN221_GroupJQK
     /// <summary>
     /// Interaction logic for ManageBook.xaml
     /// </summary>
-    public partial class ManageBook : Window
+    public partial class ManageBook : Page
     {
         public ManageBook()
         {
             InitializeComponent();
         }
 
-        private void btnHideBook_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            load();
+        }
+        private void load()
+        {
+            var books = PRN221_LibContext.Ins.Books.Include(x => x.Author).Include(x => x.Category).Include(x => x.Publisher).ToList();
+            dgvBook.ItemsSource = books;
         }
 
-        private void btnDeleteBook_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

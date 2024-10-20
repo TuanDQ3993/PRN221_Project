@@ -1,116 +1,103 @@
-﻿<Window x:Class="ProjectPRN221_GroupJQK.ManageBook"
+﻿<Page x:Class="ProjectPRN221_GroupJQK.ManageBook"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectPRN221_GroupJQK"
         mc:Ignorable="d"
-        Title="ManageBook" Height="650" Width="1000">
-    <Grid>
-        
-        <!--Chia layout--> 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        
-        <!--Hien list book-->
-        <DataGrid x:Name="dgvBook" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="False">
+        Title="ManageBook" Height="850" Width="1200" Loaded="Page_Loaded">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Books Management" 
+                 FontSize="24" 
+                 FontWeight="Bold" 
+                 Margin="0,0,0,20"/>
+
+        <!-- Search and Filter Section -->
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Search by:" 
+                     VerticalAlignment="Center" 
+                     Grid.Column="0" 
+                     Margin="0,0,10,0"/>
+
+            <ComboBox x:Name="cbSearchBy" 
+                      Grid.Column="1" 
+                      Margin="0,0,20,0">
+            </ComboBox>
+
+            <TextBlock Text="Category:" 
+                     VerticalAlignment="Center" 
+                     Grid.Column="2" 
+                     Margin="0,0,10,0"/>
+
+            <ComboBox x:Name="cbCategory" 
+                      Grid.Column="3" 
+                      Margin="0,0,20,0"/>
+
+            <Button x:Name="btnSearch" 
+                    Content="Search" 
+                    Grid.Column="4"
+                    Width="80" 
+                    Background="#FF5722"
+                    Foreground="White"/>
+
+            <Button x:Name="btnAddNewBook" 
+                    Content="Add New Book" 
+                    Grid.Column="5"
+                    Width="120" 
+                    HorizontalAlignment="Right"
+                    Background="#4CAF50"
+                    Foreground="White"/>
+        </Grid>
+
+        <!-- Books DataGrid -->
+        <DataGrid x:Name="dgvBook" 
+                  Grid.Row="2" 
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  GridLinesVisibility="None">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Book ID" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Title" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Author" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Category" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Publisher" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Year Published" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Quantity" Width="auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="ISBN" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Book ID" Width="50" IsReadOnly="True" Binding="{Binding BookId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Title" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Author" Width="150" Binding="{Binding Author.AuthorName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Category" Width="100" Binding="{Binding Category.CategoryName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Publisher" Width="150" Binding="{Binding Publisher.PublisherName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Year Published" Width="90" Binding="{Binding YearPublished}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantity" Width="80" Binding="{Binding Quantity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ISBN" Width="120" Binding="{Binding Isbn}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Actions" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="Edit" 
+                                        Width="50" 
+                                        Margin="0,0,5,0"/>
+                                <Button Content="Delete" 
+                                        Width="50"
+                                        Background="#FF5252"
+                                        Foreground="White"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-
-        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
-
-            <!-- Search Section -->
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="Search" FontWeight="Bold" Margin="0,10,0,5"/>
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <ComboBox x:Name="cbxSearch" Width="120" Margin="5" 
-                              ToolTip="Choose field to search">
-                    </ComboBox>
-                    <TextBox x:Name="txtSearch" Width="150" Margin="5" ToolTip="Enter search term"/>
-                </WrapPanel>
-            </StackPanel>
-
-            <!-- Filter Section -->
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="Filter" FontWeight="Bold" Margin="0,10,0,5"/>
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <ComboBox x:Name="cbxFilter" Width="150" Margin="5" 
-                              ToolTip="Select category to filter">
-                    </ComboBox>
-                    <Button x:Name="btnFilter" Content="Filter" Width="60" Margin="5"/>
-                </WrapPanel>
-            </StackPanel>
-
-            <!-- Book details and edit form -->
-            <StackPanel Orientation="Vertical" Margin="0,20,0,0">
-                <TextBlock Text="Book Details" FontWeight="Bold" Margin="0,10,0,5"/>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Book ID" Width="80"/>
-                    <TextBox x:Name="txtBookID" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Title" Width="80"/>
-                    <TextBox x:Name="txtTitle" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Author" Width="80"/>
-                    <ComboBox x:Name="txtAuthor" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Category" Width="80"/>
-                    <ComboBox x:Name="cbxCategory" Width="200" Margin="5">
-                    </ComboBox>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Publisher" Width="80"/>
-                    <ComboBox x:Name="cbxPublisher" Width="200" Margin="5">
-                    </ComboBox>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Year Published" Width="80"/>
-                    <DatePicker x:Name="dpkYearPublished" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="Quantity" Width="80"/>
-                    <TextBox x:Name="txtQuantity" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal" Margin="0,5,0,5">
-                    <Label Content="ISBN" Width="80"/>
-                    <TextBox x:Name="txtISBN" Width="200" Margin="5"/>
-                </WrapPanel>
-
-                <!-- Buttons for add, update, delete -->
-                <Grid Margin="10,20,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Button x:Name="btnAddBook" Content="Add" Grid.Column="0" Width="80" Margin="5"/>
-                    <Button x:Name="btnUpdateBook" Content="Update" Grid.Column="1" Width="80" Margin="5"/>
-                    <Button x:Name="btnDeleteBook" Content="Delete" Grid.Column="2" Width="80" Margin="5"/>
-                </Grid>
-            </StackPanel>
-        </StackPanel>
     </Grid>
-</Window>
+</Page>
