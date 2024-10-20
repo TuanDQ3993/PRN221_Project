@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace ProjectPRN221_GroupJQK
+{
+    /// <summary>
+    /// Interaction logic for ManageBook.xaml
+    /// </summary>
+    public partial class ManageBook : Window
+    {
+        public ManageBook()
+        {
+            InitializeComponent();
+        }
+
+        private void btnHideBook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteBook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}
