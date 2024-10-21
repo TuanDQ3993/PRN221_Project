@@ -10,18 +10,36 @@
     <Compile Update="Admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="BookControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ManageAuthor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ManageBook.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ManageCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManagePublisher.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManageTransaction.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ManageUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MemberControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BookControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -33,7 +51,19 @@
     <Page Update="ManageBook.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ManageCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManagePublisher.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManageTransaction.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ManageUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MemberControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

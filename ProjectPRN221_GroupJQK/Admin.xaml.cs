@@ -44,5 +44,20 @@ namespace ProjectPRN221_GroupJQK
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
+
+        private void btnCategories_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new ManageCategory());
+        }
+
+        private void btnPublishers_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new ManagePublisher());
+        }
+
+        private void btnTransactions_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new ManageTransaction());
+        }
     }
 }

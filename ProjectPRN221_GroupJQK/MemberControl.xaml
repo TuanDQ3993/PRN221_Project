@@ -1,0 +1,129 @@
+﻿<Window x:Class="ProjectPRN221_GroupJQK.MemberControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectPRN221_GroupJQK"
+        mc:Ignorable="d"
+        Title="MemberControl" Height="500" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--Header-->
+        <TextBlock x:Name="txtHeader"
+                   Text="User Control"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"
+                   Foreground="OrangeRed"/>
+        
+        <!--User Deatil Form-->
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <!--FullName-->
+                <TextBlock Text="Full Name:"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="txtFullName"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="0,5"/>
+                
+                <!--Email-->
+                <TextBlock Text="Email:"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="txtEmail"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="0,5"/>
+                
+                <!--Role-->
+                <TextBlock Text="Role"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <ComboBox x:Name="cbEmail"
+                          Grid.Row="2"
+                          Grid.Column="1"
+                          Height="30"
+                          Margin="0,5"/>
+                
+                <!--Phone-->
+                <TextBlock Text="Phone Number"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPhoneNumber"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="0,5"/>
+                
+                <!--Address-->
+                <TextBlock Text="Address"
+                           Grid.Row="4"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="txtAddress"
+                         Grid.Row="4"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="0,5"/>
+                
+                <!--DOB-->
+                <TextBlock Text="Date Of Birth"
+                           Grid.Row="5"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                <DatePicker x:Name="dpkDOB"
+                            Grid.Column="1"
+                            Grid.Row="5"
+                            Height="30"
+                            Margin="0,5"/>
+            </Grid>
+        </StackPanel>
+        
+        <!--Button-->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,20,0">
+            <Button x:Name="btnCancel"
+                    Content="Cancel"
+                    Width="100"
+                    Height="35"
+                    Margin="0,0,10,0"
+                    Background="#FF5252"
+                    Foreground="White"/>
+            <Button x:Name="btnAction"
+                    Content="Add"
+                    Width="100"
+                    Height="35"
+                    Background="#4CAF50"
+                    Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

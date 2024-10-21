@@ -64,21 +64,21 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnCategories">
+                <Button x:Name="btnCategories" Click="btnCategories_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="📑" Margin="0,0,10,0"/>
                         <TextBlock Text="Categories Management"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnPublishers">
+                <Button x:Name="btnPublishers" Click="btnPublishers_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="🏢" Margin="0,0,10,0"/>
                         <TextBlock Text="Publishers Management"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnTransactions">
+                <Button x:Name="btnTransactions" Click="btnTransactions_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="📋" Margin="0,0,10,0"/>
                         <TextBlock Text="Transactions Management"/>
