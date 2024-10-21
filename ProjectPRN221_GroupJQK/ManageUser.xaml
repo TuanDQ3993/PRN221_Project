@@ -53,7 +53,7 @@
              Grid.Column="3"
              Width="80 " 
              Background="#FF5722"
-             Foreground="White"/>
+             Foreground="White" Click="btnSearch_Click"/>
 
             <TextBlock Text="Role:" 
              VerticalAlignment="Center" 
@@ -62,7 +62,7 @@
 
             <ComboBox x:Name="cbRole" 
              Grid.Column="5" 
-             Margin="0,0,20,0"/>
+             Margin="0,0,20,0" SelectionChanged="cbRole_SelectionChanged"/>
 
             <Button x:Name="btnAddUser" 
              Content="Add New User" 
@@ -82,13 +82,13 @@
               SelectionMode="Single"
               GridLinesVisibility="None">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="User ID" Width="80" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="FullName" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Email" Width="200"></DataGridTextColumn>
-                <DataGridTextColumn Header="Role" Width="100"></DataGridTextColumn>
-                <DataGridTextColumn Header="Phone" Width="200"></DataGridTextColumn>
-                <DataGridTextColumn Header="Address" Width="250"></DataGridTextColumn>
-                <DataGridTextColumn Header="DOB" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="User ID" Width="80" IsReadOnly="True" Binding="{Binding UserId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="FullName" Width="*" Binding="{Binding FullName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email" Width="200" Binding="{Binding Email}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Role" Width="100" Binding="{Binding RoleNavigation.RoleName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Phone" Width="200" Binding="{Binding PhoneNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Address" Width="250" Binding="{Binding Address}"></DataGridTextColumn>
+                <DataGridTextColumn Header="DOB" Width="150" Binding="{Binding DateOfBirth}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="Actions" Width="120">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

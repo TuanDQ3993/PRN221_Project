@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ProjectPRN221_GroupJQK"
       mc:Ignorable="d" 
       d:DesignHeight="850" d:DesignWidth="1200"
-      Title="ManageAuthor">
+      Title="ManageAuthor" Loaded="Page_Loaded">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -42,7 +42,7 @@
              Grid.Column="1" 
              Margin="0,0,20,0">
             </ComboBox>
-            
+
             <TextBox x:Name="txtSearch" 
              Grid.Column="2" 
              Margin="0,0,20,0">
@@ -50,10 +50,10 @@
 
             <Button x:Name="btnSearch" 
              Content="Search" 
-             Grid.Column="3"
+             Grid.Column="2"
              Width="80" 
              Background="#FF5722"
-             Foreground="White"/>
+             Foreground="White" Grid.ColumnSpan="2" Height="22" Margin="200,0,0,0" VerticalAlignment="Top" Click="btnSearch_Click"/>
 
             <Button x:Name="btnAddAuthor" 
              Content="Add New Author" 
@@ -73,8 +73,8 @@
           SelectionMode="Single"
           GridLinesVisibility="None">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Author ID" Width="100" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="Author Name" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Author ID" Width="100" IsReadOnly="True" Binding="{Binding AuthorId}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Author Name" Width="*" Binding="{Binding AuthorName}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="Actions" Width="120">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
